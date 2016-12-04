@@ -56,8 +56,8 @@
     <StartupObject>Emby.Service.ServiceStartup</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MediaBrowser.Server.Startup.Common">
-      <HintPath>.\MediaBrowser.Server.Startup.Common.dll</HintPath>
+    <Reference Include="Emby.Server.Implementations">
+      <HintPath>.\Emby.Server.Implementations.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />

@@ -1,9 +1,11 @@
-﻿using MediaBrowser.Server.Startup.Common;
+﻿using Emby.Server.Implementations;
+using System;
 using System.Configuration.Install;
 using System.Diagnostics;
 using System.IO;
 using System.ServiceProcess;
 using System.Threading.Tasks;
+
 
 namespace Emby.Service
 {
@@ -14,7 +16,7 @@ namespace Emby.Service
         /// </summary>
         static void Main()
         {
-            var options = new StartupOptions();
+            var options = new StartupOptions(Environment.GetCommandLineArgs());
             var currentProcess = Process.GetCurrentProcess();
             var applicationName = "MediaBrowser.ServerApplication.exe";
             var servicePath = currentProcess.MainModule.FileName;
